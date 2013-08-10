@@ -575,10 +575,11 @@ to be loaded by ghci."
                :title (format "*%s*" (haskell-session-name (car state)))
                :body msg
                :app-name (ecase haskell-process-type
-                           ('ghci haskell-process-path-cabal)
-                           ('cabal-repl haskell-process-path-cabal)
-                           ('cabal-ghci haskell-process-path-cabal)
-                           ('cabal-dev haskell-process-path-cabal-dev))
+                           ('ghci "cabal")
+                           ('cabal-repl "cabal")
+                           ('cabal-ghci "cabal")
+                           ('cabal-dev "cabal-dev"))
+
                :app-icon haskell-process-logo
                )))))))))
 
